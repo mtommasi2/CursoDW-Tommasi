@@ -1,0 +1,313 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.encabezado{
+    background-color: #fffffff7;
+    overflow: auto;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+.logoContainer{
+    margin-left: 3%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.relleno{
+    width: 50%;
+    height: 70px;
+}
+
+
+.logo{
+    padding: 2px;
+    width: 70;
+    height: 70px;
+}
+
+/*medias para acomodar el logo a responsive*/
+
+@media (min-width: 321px) and (max-width: 900px){
+    .logo{
+        width: 97%;
+    } 
+}
+
+@media (max-width: 320px){
+    .logo{
+        width: 97%;
+    }
+}
+
+.navbar{
+    background-color:  #fffffff7 !important;
+}
+
+.alineacionNav{
+    margin-left: 35px;
+    font-size: 20px;
+}
+
+.nav-link{
+    list-style: none;
+    padding: 25px;
+    margin-right: 40px;
+    border-left: solid #f9f9f978 1px;
+    font-size: 18px;
+}
+
+.seccionNombre{
+    color: aliceblue;
+    font-size: 30px;
+    margin-left: 51px;
+    padding-bottom: 10px;
+}
+
+
+.destacados{
+    text-align: center;
+    font-size: 32px;
+    margin: 30px;
+}
+
+.modeloDestacado{
+    height: 155px;
+    width: 250px;
+    background-size: cover;
+    border-radius: 5px;
+} /*tamano de las imagenes destacadas en el index*/
+
+
+
+.figureDestacada{
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} /*para centrar el texto debajo de las imagenes destacadas y estilo de texto*/
+
+.margenesDestacados{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/*medias para responsive de los modelos de auto*/
+@media (min-width: 415px) and (max-width: 767px){
+    .modeloDestacado{
+        height: 140px;
+        width: 215px;
+    }
+}
+
+@media (max-width: 767px){
+    .figureDestacada{
+        margin-bottom: 20px;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1200px){
+    .modeloDestacado{
+        height: 160px;
+        width: 225px;
+        margin: 0 60px 0 75px;
+    }
+}
+
+@media (min-width: 427px) and (max-width: 429px){
+    .modeloDestacado{
+        height: 165px;
+        width: 245px;
+    }
+}
+
+.separador{
+    padding-bottom: 55px;
+}
+
+/*footer*/
+
+.piePag{
+    height: fit-content;
+    width: 100%;
+    background-color: #4A4F59;
+    color: #fff;
+    /*abro grid del footer*/
+    display: grid;
+    justify-content: space-evenly ;
+    grid-template-columns: repeat(3 1fr);
+    grid-template-rows: repeat(2 1fr);
+    grid-template-areas: "horarios telefono contacto"
+                         "horarios telefono contacto";
+}
+
+.horarios{
+    grid-area: horarios;
+}
+
+.telefono{
+    grid-area: telefono;
+}
+
+.contacto{
+   grid-area: contacto;
+}
+
+/*cierro grid del footer*/
+
+#seguinos{
+    margin-bottom: 0px;
+}
+
+.iconoIg{
+   width: 60px;
+   height: 35px;
+   position: relative;
+   right: 14px;
+}
+
+.iconoWs{
+    width: 65px;
+    height: 55px;
+    position: relative;
+    right: 14px;
+ }
+ 
+
+.iconoYt{
+    width: 65px;
+    height: 50px;
+    position: relative;
+    right: 14px;
+ }
+ 
+.iconoTelefono{
+    width: 23px;
+    height: 23px;
+}
+
+.info{
+    font-size: 24px;
+    margin-top: 5px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.infoContenido{
+    font-size: 17px;
+    margin-bottom: 10px ;
+}
+
+.redes{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media (min-width: 320px) and (max-width: 767px){
+    .piePag{
+    grid-template-columns: 1 1fr;
+    grid-template-rows: repeat(3 1fr);
+    grid-template-areas:     "horarios"
+                             "telefono"
+                             "contacto";
+    row-gap: 50px;
+    }
+    .info{
+        font-size: 20px;
+    }
+}
+
+/*exclusivo para NOSOTROS*/
+
+.imgEquipoContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.imagenEquipo{
+    object-fit: cover;
+    width: 68%;
+    height: 550px;
+    margin: 50px;
+}
+
+@media (min-width: 321px) and (max-width: 429px){
+    .imagenEquipo{
+        height: 200px;
+        width: 80%;
+    }
+}
+
+.descripcionContainer{
+    margin: 0 200px 50px 200px;
+    /*grid del texto de presentacion de la empresa*/
+    display: grid;
+    grid-template-columns: repeat(2 1fr);
+    grid-template-rows: repeat(3 1fr);
+    grid-template-areas: "parrafo1 parrafo4"
+                         "parrafo2 parrafo5"
+                         "parrafo3 parrafo6";
+    row-gap: 10px;
+    column-gap: 25px;
+    text-align: justify;
+    margin: 0 200px 75px 200;
+    text-align: justify;
+}
+
+
+
+.parrafoFinal {
+    font-weight: bold;
+    color: #ff0000;
+    height: 10px;
+}
+
+/*media para acomodar el texto en una sola columna para disp. chicos*/
+
+@media (min-width: 500px) and (max-width: 900px){
+    .descripcionContainer{
+            margin: 0 100px 50px 100px;
+            display: grid;
+            grid-template-columns: 1 1fr;
+            grid-template-rows: repeat(6 1fr);
+            grid-template-areas: "parrafo1"
+                                 "parrafo2"
+                                 "parrafo3"
+                                 "parrafo4"
+                                 "parrafo5"
+                                 "parrafo6";
+            row-gap: 10px;
+            column-gap: 25px;
+            text-align: justify;
+            font-size: medium;
+    }
+}
+
+    @media (min-width: 300px) and (max-width: 499px){
+        .descripcionContainer{
+                margin: 0 50px 50px 50px;
+                display: grid;
+                grid-template-columns: 1 1fr;
+                grid-template-rows: repeat(6 1fr);
+                grid-template-areas: "parrafo1"
+                                     "parrafo2"
+                                     "parrafo3"
+                                     "parrafo4"
+                                     "parrafo5"
+                                     "parrafo6";
+                row-gap: 10px;
+                column-gap: 25px;
+                text-align: justify;
+                font-size: 15px;
+        }
+}
+
+/*---*/
