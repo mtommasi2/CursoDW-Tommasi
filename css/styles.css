@@ -348,6 +348,7 @@
 @media (min-width: 300px) and (max-width: 900px) {
   .descripcionContainer .parrafoFinal {
     text-align: left;
+    margin-bottom: 40px;
   }
 }
 
@@ -395,13 +396,13 @@
   font-size: 17px;
 }
 
-input, select {
-  margin: 10px 0 0 0;
+.opciones, input, select {
   width: 100%;
 }
 
-input, .dato, select, #submit {
+input, .dato, select, #submit, textarea {
   font-weight: 600;
+  padding: 2px;
 }
 
 .nombre, .numero {
@@ -414,6 +415,12 @@ input, .dato, select, #submit {
 
 .servicioSolicitado {
   width: 248px;
+}
+
+input, select {
+  background-color: rgba(255, 0, 0, 0.18);
+  border-radius: 3px;
+  border-width: 2px;
 }
 
 #mensaje {
